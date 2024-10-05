@@ -50,3 +50,10 @@ REFERENCES "titles" ("title_id");
 
 ALTER TABLE "salaries" ADD CONSTRAINT "fk_salaries_employee_no" FOREIGN KEY("emp_no")
 REFERENCES "employees" ("emp_no");
+
+ALTER TABLE dept_emp
+ADD CONSTRAINT pk_dept_emp PRIMARY KEY (emp_no, dept_no);
+
+ALTER TABLE dept_manager
+ADD CONSTRAINT pk_dept_manager PRIMARY KEY (emp_no, dept_no);
+
